@@ -1,0 +1,404 @@
+/* ==========================================================================
+   DepEd ALS - Modern Admin Theme & Component Stylesheet
+   Centralized styles for Dashboard, Add, View, and Edit Account Views
+   ========================================================================== */
+
+:root {
+  --als-navy: #0B1E3B;
+  --als-navy-dark: #07162C;
+  --als-blue: #185ADB;
+  --als-blue-light: #EFF6FF;
+  --als-blue-border: #BFDBFE;
+  --als-slate-dark: #0F172A;
+  --als-slate-mid: #334155;
+  --als-slate-muted: #64748B;
+  --als-slate-light: #94A3B8;
+  --als-slate-border: #CBD5E1;
+  --als-bg: #F8FAFC;
+  --als-white: #FFFFFF;
+  --als-green: #059669;
+  --als-green-light: #ECFDF5;
+  --als-green-border: #A7F3D0;
+  --als-amber: #D97706;
+  --als-amber-light: #FEF3C7;
+  --als-amber-border: #FDE68A;
+  --als-red: #DC2626;
+  --als-red-light: #FEF2F2;
+  --als-red-border: #FCA5A5;
+}
+
+body.admin-body {
+  margin: 0;
+  padding: 0;
+  background: var(--als-bg);
+  color: var(--als-slate-dark);
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 13.5px;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+}
+
+.deped-laptop-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Page Watermark */
+.page-watermark {
+  padding: 10px 32px;
+  font-size: 14px;
+  color: var(--als-slate-light);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  background: var(--als-bg);
+}
+
+/* Sidebar Navigation */
+.deped-sidebar-v3 {
+  width: 255px;
+  background: var(--als-navy);
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 22px 14px;
+}
+
+.deped-brand-strip {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+  padding: 0 6px;
+}
+
+.deped-brand-icon-box {
+  width: 34px;
+  height: 34px;
+  background: #FFFFFF;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  color: var(--als-navy);
+}
+
+.deped-workspace-badge {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-bottom: 18px;
+}
+
+.deped-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 12px;
+  border-radius: 8px;
+  color: var(--als-slate-light);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.15s ease;
+  margin-bottom: 2px;
+}
+
+.deped-nav-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: #FFFFFF;
+}
+
+.deped-nav-item.active {
+  background: var(--als-blue);
+  color: #FFFFFF;
+  font-weight: 750;
+}
+
+/* Topbar Strip */
+.deped-topbar-strip {
+  background: #FFFFFF;
+  border-bottom: 1px solid #E2E8F0;
+  padding: 12px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Stat Cards */
+.deped-stat-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 18px 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.stat-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stat-number-val {
+  font-size: 28px;
+  font-weight: 850;
+  color: var(--als-slate-dark);
+  line-height: 1;
+}
+
+.stat-subtext-note {
+  font-size: 11.5px;
+  color: var(--als-slate-muted);
+  font-weight: 600;
+}
+
+/* Form Container Cards */
+.form-card-container {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.field-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 750;
+  color: var(--als-slate-dark);
+  margin-bottom: 5px;
+}
+
+.field-input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1.5px solid var(--als-slate-border);
+  border-radius: 8px;
+  font-size: 13px;
+  color: var(--als-slate-dark);
+  box-sizing: border-box;
+  outline: none;
+  background: #FFFFFF;
+  font-family: inherit;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.field-input:focus {
+  border-color: var(--als-blue);
+  box-shadow: 0 0 0 3px rgba(24, 90, 219, 0.12);
+}
+
+.field-input.has-error {
+  border-color: var(--als-red);
+  background: var(--als-red-light);
+}
+
+.field-input[readonly] {
+  background: var(--als-bg);
+  color: #475569;
+  cursor: not-allowed;
+}
+
+/* Radio Cards */
+.type-radio-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: 1.5px solid var(--als-slate-border);
+  background: #FFFFFF;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--als-slate-mid);
+  flex: 1;
+  transition: all 0.15s ease;
+}
+
+.type-radio-pill.selected {
+  border-color: var(--als-blue);
+  background: var(--als-blue-light);
+  color: var(--als-blue);
+}
+
+/* Status Badges */
+.status-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 750;
+}
+
+.status-badge-pill.active {
+  background: var(--als-green-light);
+  color: var(--als-green);
+  border: 1px solid var(--als-green-border);
+}
+
+.status-badge-pill.pending {
+  background: var(--als-amber-light);
+  color: #B45309;
+  border: 1px solid var(--als-amber-border);
+}
+
+.status-badge-pill.archived {
+  background: #F1F5F9;
+  color: var(--als-slate-muted);
+  border: 1px solid var(--als-slate-border);
+}
+
+/* Action Buttons & Pills */
+.table-action-pill {
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  text-decoration: none;
+  border: 1px solid #E2E8F0;
+  background: #F8FAFC;
+  color: var(--als-slate-mid);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.15s ease;
+  font-family: inherit;
+}
+
+.table-action-pill:hover {
+  background: var(--als-blue-light);
+  color: var(--als-blue);
+  border-color: var(--als-blue-border);
+}
+
+.table-action-pill.primary {
+  background: var(--als-blue);
+  color: #FFFFFF;
+  border-color: var(--als-blue);
+}
+
+.table-action-pill.primary:hover {
+  background: #1555C9;
+}
+
+.table-action-pill.archive:hover {
+  background: var(--als-amber-light);
+  color: #92400E;
+  border-color: var(--als-amber-border);
+}
+
+/* View Account Cards */
+.view-card-container {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.detail-item-group {
+  margin-bottom: 16px;
+}
+
+.detail-item-lbl {
+  font-size: 11px;
+  color: var(--als-slate-muted);
+  font-weight: 600;
+  display: block;
+  margin-bottom: 3px;
+}
+
+.detail-item-val {
+  font-size: 13.5px;
+  color: var(--als-slate-dark);
+  font-weight: 750;
+}
+
+/* Alert Boxes */
+.alert-box-info {
+  background: var(--als-blue-light);
+  border: 1px solid var(--als-blue-border);
+  border-radius: 10px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.alert-box-error {
+  background: var(--als-red-light);
+  border: 1px solid var(--als-red-border);
+  border-radius: 10px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.alert-box-warning {
+  background: #FFFBEB;
+  border: 1px solid var(--als-amber-border);
+  border-radius: 8px;
+  padding: 12px 14px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.alert-box-success {
+  background: #DCFCE7;
+  border: 1px solid #86EFAC;
+  border-radius: 8px;
+  padding: 12px 18px;
+  color: #15803D;
+  font-size: 12.5px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Footer */
+.deped-admin-footer {
+  margin-top: auto;
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11.5px;
+  color: var(--als-slate-light);
+}
+
+.deped-admin-footer a {
+  color: var(--als-slate-light);
+  text-decoration: none;
+}
+
+.deped-admin-footer a:hover {
+  color: var(--als-blue);
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+  .deped-laptop-layout {
+    flex-direction: column;
+  }
+  .deped-sidebar-v3 {
+    width: 100%;
+    min-height: auto;
+  }
+}
+

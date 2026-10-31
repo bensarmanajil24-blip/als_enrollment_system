@@ -1,0 +1,259 @@
+/* ==========================================================================
+   DepEd ALS - Split Screen Unified Sign-in Stylesheet
+   ========================================================================== */
+
+.deped-split-container {
+  display: flex;
+  min-height: calc(100vh - 40px);
+  width: 100%;
+  background: #FFFFFF;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Left Hero Pane */
+.deped-hero-pane {
+  flex: 1;
+  width: 50%;
+  max-width: 50%;
+  background: linear-gradient(145deg, #07162C 0%, #0B1E3B 65%, #0F274D 100%);
+  color: #FFFFFF;
+  padding: 44px 50px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.hero-inner-content {
+  max-width: 520px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.deped-brand-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.deped-brand-icon-box {
+  width: 38px;
+  height: 38px;
+  background: #FFFFFF;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  color: #07162C;
+}
+
+.hero-photo-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  margin: 28px 0;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  width: 100%;
+  max-width: 520px;
+}
+
+.hero-photo-card img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10.5;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-admin-pill-badge {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  background: rgba(255, 255, 255, 0.95);
+  color: #0B1E3B;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 11.5px;
+  font-weight: 750;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(4px);
+}
+
+.hero-pillars-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.hero-pillar-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #94A3B8;
+  font-weight: 600;
+}
+
+/* Right Form Pane */
+.deped-form-pane {
+  flex: 1;
+  width: 50%;
+  max-width: 50%;
+  background: #FFFFFF;
+  padding: 44px 50px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.form-inner-content {
+  max-width: 440px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.login-topbar-strip {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: #64748B;
+  margin-bottom: 24px;
+}
+
+.login-input-group {
+  margin-bottom: 18px;
+  position: relative;
+}
+
+.login-input-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: #0F172A;
+  margin-bottom: 6px;
+}
+
+.login-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.login-input-wrap input {
+  width: 100%;
+  padding: 12px 14px 12px 38px;
+  border: 1.5px solid #CBD5E1;
+  border-radius: 8px;
+  font-size: 13.5px;
+  color: #0F172A;
+  outline: none;
+  box-sizing: border-box;
+  transition: all 0.15s ease;
+  background: #FFFFFF;
+  font-family: inherit;
+}
+
+.login-input-wrap input:focus {
+  border-color: #1D64EC;
+  box-shadow: 0 0 0 3px rgba(29, 100, 236, 0.12);
+}
+
+.input-icon-left {
+  position: absolute;
+  left: 12px;
+  width: 16px;
+  height: 16px;
+  color: #94A3B8;
+  pointer-events: none;
+}
+
+.password-toggle-btn {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #94A3B8;
+  display: grid;
+  place-items: center;
+  padding: 4px;
+}
+
+.password-toggle-btn:hover {
+  color: #1D64EC;
+}
+
+.btn-deped-primary {
+  width: 100%;
+  background: #1D64EC;
+  color: #FFFFFF;
+  border: none;
+  padding: 13px 18px;
+  border-radius: 8px;
+  font-size: 13.5px;
+  font-weight: 750;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.15s ease;
+  box-shadow: 0 2px 6px rgba(29, 100, 236, 0.2);
+}
+
+.btn-deped-primary:hover {
+  background: #1555C9;
+}
+
+/* Demo Helper */
+.demo-pill-btn {
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  border: 1px solid #E2E8F0;
+  background: #F8FAFC;
+  color: #334155;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+.demo-pill-btn:hover {
+  background: #EFF6FF;
+  color: #1D64EC;
+  border-color: #BFDBFE;
+}
+
+@media (max-width: 980px) {
+  .deped-split-container {
+    flex-direction: column;
+  }
+  .deped-hero-pane {
+    padding: 30px 24px;
+  }
+  .deped-form-pane {
+    padding: 30px 24px;
+    max-width: 100%;
+  }
+}
+

@@ -1,0 +1,638 @@
+/* ALS Connect - Mobile & QR Pass Ecosystem Styles
+   Matches Stitch Designs: Student Enrollment, QR Pass & Status, Admin QR Scanner
+*/
+
+:root {
+  --deped-blue: #1455A0;
+  --deped-navy: #123557;
+  --deped-green: #21734B;
+  --deped-green-light: #EBF5EE;
+  --deped-gold: #F4BB4F;
+  --deped-gold-light: #FEF8E7;
+  --deped-red: #B52B3A;
+  --deped-red-light: #FDF0F0;
+  --deped-bg: #F4F7FB;
+  --deped-card: #ffffff;
+  --deped-border: #D7DFE8;
+  --deped-slate: #53667A;
+}
+
+body.deped-mobile-body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--deped-bg);
+  color: var(--deped-navy);
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 14.5px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Mobile Wrapper Container */
+.deped-mobile-wrap {
+  max-width: 440px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background: #ffffff;
+  box-shadow: 0 0 30px rgba(18, 53, 87, 0.08);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-sizing: border-box;
+  padding-bottom: 74px; /* Space for bottom nav */
+}
+
+/* Top App Header */
+.deped-app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--deped-border);
+  background: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 40;
+}
+
+.header-left-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: var(--deped-navy);
+}
+
+.header-brand-logo {
+  width: 28px;
+  height: 28px;
+  background: var(--deped-navy);
+  border-radius: 6px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.header-center-title {
+  text-align: center;
+}
+
+.header-dept-tag {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--deped-slate);
+  text-transform: uppercase;
+}
+
+.header-screen-title {
+  font-size: 13.5px;
+  font-weight: 750;
+  color: var(--deped-navy);
+  line-height: 1.2;
+}
+
+.header-right-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-icon-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--deped-border);
+  background: #fff;
+  display: grid;
+  place-items: center;
+  color: var(--deped-navy);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* Content Area */
+.deped-content {
+  padding: 16px 18px 24px;
+  flex: 1;
+}
+
+/* Top Banner Notice */
+.deped-top-banner {
+  border-radius: 14px;
+  padding: 16px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.deped-top-banner.blue {
+  background: #EBF3FC;
+  border: 1px solid #C4DDF8;
+}
+
+.deped-top-banner.green {
+  background: var(--deped-green-light);
+  border: 1px solid #B8DEC7;
+}
+
+.banner-badge-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--deped-navy);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.banner-pill-tag {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--deped-blue);
+  margin-bottom: 2px;
+}
+
+.banner-title {
+  font-size: 16px;
+  font-weight: 750;
+  color: var(--deped-navy);
+  margin: 0 0 4px 0;
+}
+
+.banner-sub {
+  font-size: 12.5px;
+  color: var(--deped-slate);
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* Form Styles */
+.field-group {
+  margin-bottom: 18px;
+}
+
+.field-label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.field-label {
+  font-size: 13px;
+  font-weight: 650;
+  color: var(--deped-navy);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.field-sub-label {
+  font-size: 11px;
+  color: var(--deped-slate);
+  font-weight: 500;
+}
+
+.deped-input,
+.deped-select,
+.deped-textarea {
+  width: 100%;
+  height: 46px;
+  padding: 10px 14px;
+  border: 1px solid var(--deped-border);
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: inherit;
+  color: var(--deped-navy);
+  background: #fff;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.deped-textarea {
+  height: 80px;
+  resize: vertical;
+}
+
+.deped-input:focus,
+.deped-select:focus,
+.deped-textarea:focus {
+  border-color: var(--deped-blue);
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px var(--deped-blue);
+}
+
+.field-helper {
+  font-size: 11.5px;
+  color: var(--deped-slate);
+  margin-top: 5px;
+  line-height: 1.4;
+}
+
+/* Phone input with Philippine flag */
+.phone-input-wrap {
+  display: flex;
+  gap: 8px;
+}
+
+.phone-flag-box {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0 12px;
+  background: #F4F7FB;
+  border: 1px solid var(--deped-border);
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--deped-navy);
+}
+
+/* Program Radio Cards */
+.radio-program-card {
+  border: 1.5px solid var(--deped-border);
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  transition: all 0.15s;
+}
+
+.radio-program-card.active {
+  border-color: var(--deped-blue);
+  background: #F8FAFD;
+}
+
+.program-radio-dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid var(--deped-border);
+  margin-top: 2px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.radio-program-card.active .program-radio-dot {
+  border-color: var(--deped-blue);
+  background: var(--deped-blue);
+}
+
+.radio-program-card.active .program-radio-dot::after {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ffffff;
+}
+
+.program-card-info h4 {
+  font-size: 14px;
+  margin: 0 0 4px 0;
+  color: var(--deped-navy);
+}
+
+.program-card-info p {
+  font-size: 12px;
+  color: var(--deped-slate);
+  margin: 0 0 8px 0;
+  line-height: 1.4;
+}
+
+.program-pill {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 999px;
+  font-size: 10.5px;
+  font-weight: 700;
+}
+
+.program-pill.blue {
+  background: #EBF3FC;
+  color: var(--deped-blue);
+}
+
+.program-pill.green {
+  background: var(--deped-green-light);
+  color: var(--deped-green);
+}
+
+/* Schedule Toggle Segment */
+.schedule-toggle-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.schedule-toggle-btn {
+  padding: 12px 10px;
+  border: 1px solid var(--deped-border);
+  border-radius: 10px;
+  background: #fff;
+  cursor: pointer;
+  text-align: center;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--deped-navy);
+  transition: all 0.15s;
+}
+
+.schedule-toggle-btn.active {
+  background: var(--deped-navy);
+  color: #fff;
+  border-color: var(--deped-navy);
+}
+
+.schedule-toggle-sub {
+  display: block;
+  font-size: 10.5px;
+  font-weight: 400;
+  opacity: 0.8;
+  margin-top: 2px;
+}
+
+/* Submit Action Button */
+.btn-deped-primary {
+  width: 100%;
+  min-height: 50px;
+  background: var(--deped-navy);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+
+.btn-deped-primary:hover {
+  background: #0d2843;
+}
+
+/* QR Pass Card Styles (Screen 2) */
+.deped-pass-card {
+  background: #ffffff;
+  border: 1.5px solid var(--deped-border);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(18, 53, 87, 0.08);
+  margin-bottom: 24px;
+}
+
+.pass-card-top-navy {
+  background: var(--deped-navy);
+  color: #ffffff;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pass-card-badge-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #C3D5E8;
+}
+
+.pass-tracking-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pass-tracking-code {
+  font-size: 22px;
+  font-weight: 850;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+}
+
+.btn-copy-code {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 8px;
+  color: #fff;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.pass-card-body {
+  padding: 20px;
+  text-align: center;
+}
+
+.pass-learner-header {
+  text-align: left;
+  margin-bottom: 18px;
+}
+
+.pass-meta-pill-card {
+  background: #F4F7FB;
+  border-radius: 10px;
+  padding: 10px 14px;
+  margin-bottom: 8px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Scannable QR Frame */
+.qr-frame-box {
+  width: 200px;
+  height: 200px;
+  margin: 16px auto;
+  position: relative;
+  display: grid;
+  place-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.qr-corner-bracket {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-color: var(--deped-navy);
+  border-style: solid;
+}
+
+.qr-corner-bracket.tl { top: 0; left: 0; border-width: 3px 0 0 3px; border-top-left-radius: 8px; }
+.qr-corner-bracket.tr { top: 0; right: 0; border-width: 3px 3px 0 0; border-top-right-radius: 8px; }
+.qr-corner-bracket.bl { bottom: 0; left: 0; border-width: 0 0 3px 3px; border-bottom-left-radius: 8px; }
+.qr-corner-bracket.br { bottom: 0; right: 0; border-width: 0 3px 3px 0; border-bottom-right-radius: 8px; }
+
+/* Camera Viewfinder for Scanner (Screen 1) */
+.camera-viewfinder-card {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #0f1c2d;
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  margin-bottom: 18px;
+}
+
+.camera-preview-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+}
+
+.camera-overlay-controls {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  right: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.camera-tag-pill {
+  background: rgba(18, 53, 87, 0.75);
+  backdrop-filter: blur(4px);
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-size: 11.5px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.camera-action-icon-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(18, 53, 87, 0.75);
+  backdrop-filter: blur(4px);
+  color: #fff;
+  border: none;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.camera-scan-brackets {
+  width: 170px;
+  height: 170px;
+  position: relative;
+  z-index: 5;
+}
+
+.camera-laser-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 2px;
+  background: #22c55e;
+  box-shadow: 0 0 12px #22c55e;
+  animation: laserScan 2s infinite ease-in-out;
+}
+
+@keyframes laserScan {
+  0% { top: 15%; }
+  50% { top: 85%; }
+  100% { top: 15%; }
+}
+
+.camera-bottom-hint {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  right: 12px;
+  text-align: center;
+  font-size: 12px;
+  color: #e2e8f0;
+  background: rgba(18, 53, 87, 0.85);
+  padding: 6px 12px;
+  border-radius: 999px;
+  z-index: 10;
+}
+
+/* Scanned Result Card (Screen 1) */
+.scanned-result-card {
+  background: #ffffff;
+  border: 1px solid var(--deped-border);
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 4px 16px rgba(18, 53, 87, 0.06);
+  margin-bottom: 24px;
+}
+
+/* Fixed Bottom Navigation (4 Tabs) */
+.deped-bottom-navbar {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 440px;
+  height: 64px;
+  background: #ffffff;
+  border-top: 1px solid var(--deped-border);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 50;
+  box-sizing: border-box;
+}
+
+.deped-nav-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--deped-slate);
+  min-width: 60px;
+}
+
+.deped-nav-tab.active {
+  color: var(--deped-blue);
+  font-weight: 700;
+}
+
+.deped-nav-tab svg {
+  width: 22px;
+  height: 22px;
+}
+
